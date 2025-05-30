@@ -1,4 +1,4 @@
-## 🔧 How to Run
+##  How to Run
 
 1. Clone the repo
 2. Set your GOOGLE_API_KEY in system environment variables
