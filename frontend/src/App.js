@@ -38,9 +38,9 @@ export default function GeminiChat() {
   return (
     <div
       style={{
-        backgroundColor: "#0f172a", // dark navy
+        backgroundColor: "#0f172a",
         minHeight: "100vh",
-        color: "#e0f2fe", // light cyan
+        color: "#e0f2fe",
         fontFamily: "monospace",
         display: "flex",
         flexDirection: "column",
@@ -155,9 +155,23 @@ export default function GeminiChat() {
                 padding: 10,
                 borderRadius: 8,
                 whiteSpace: "pre-wrap",
+                marginBottom: 10,
               }}
             >
-              {response}
+              <strong style={{ color: "#38bdf8" }}>Prompt:</strong>{" "}
+              {history.length > 0
+                ? history[history.length - 1].userMessage
+                : prompt}
+            </div>
+            <div
+              style={{
+                backgroundColor: "#334155",
+                padding: 10,
+                borderRadius: 8,
+                whiteSpace: "pre-wrap",
+              }}
+            >
+              <strong style={{ color: "#38bdf8" }}>Gemini:</strong> {response}
             </div>
           </div>
         )}
